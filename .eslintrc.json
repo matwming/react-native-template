@@ -1,0 +1,54 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "react-native/react-native": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-native/all",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-native",
+    "react-hooks",
+    "@typescript-eslint/eslint-plugin"
+  ],
+  "rules": {
+    "react-native/no-unused-styles": 2,
+    "react-native/no-raw-text": 2,
+    "react-native/no-inline-styles": "off",
+    "react-native/no-color-literals": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-uses-vars": "error",
+    "no-console": "off",
+    "no-unused-vars": "error",
+    "indent": "off",
+    "@typescript-eslint/indent": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "none",
+        "singleQuote": true,
+        "jsxSingleQuote": false,
+        "printWidth": 100,
+        "semi": true,
+        "jsxBracketSameLine": true
+      }
+    ]
+  }
+}
