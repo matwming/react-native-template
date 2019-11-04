@@ -1,12 +1,11 @@
 import axios from "axios";
-import AsyncStorage from "@react-native-community/async-storage";
-import * as API from "../model/services/settings";
+import AsyncStorage from '@react-native-community/async-storage';
 /*
  * cancel axios request to prevent memory leak
  * */
 
 export const source = axios.CancelToken.source();
-const baseURL: string = API.AOCAI_HOST;
+const baseURL: string = '';
 const instance = axios.create({
   baseURL: baseURL,
   timeout: 4000, //control whether cancel this request if waiting time is longer than this

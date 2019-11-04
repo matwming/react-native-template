@@ -4,7 +4,7 @@ import rootReducer from './reducers/rootReducer';
 
 /**
 |--------------------------------------------------
-| 开启redux store,方便查看store中的state信息
+| connect redux store to react native debugger 
 |--------------------------------------------------
 */
 let composeEnhancer = compose;
@@ -13,14 +13,12 @@ if (__DEV__) {
 }
 /**
 |--------------------------------------------------
-| 注释结束
+| end of comment
 |--------------------------------------------------
 */
 export default function configureStore(initialState) {
     const middleware = [thunk];
-    const store = createStore(
-        rootReducer,
-        composeEnhancer(applyMiddleware(...middleware))
+    const store=createStore(rootReducer,composeEnhancer(applyMiddleware(...middleware))
     );
     return store;
 }

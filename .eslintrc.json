@@ -14,6 +14,11 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -25,7 +30,8 @@
     "react",
     "react-native",
     "react-hooks",
-    "@typescript-eslint/eslint-plugin"
+    "@typescript-eslint/eslint-plugin",
+    "eslint-plugin-prettier"
   ],
   "rules": {
     "react-native/no-unused-styles": 2,

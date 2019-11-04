@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React from 'react';
 import {
   SafeAreaView,
@@ -14,6 +6,7 @@ import {
   View,
   Text,
   StatusBar,
+  Button
 } from 'react-native';
 
 import {
@@ -24,7 +17,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const App: () => React$Node = () => {
+const App: () => React$Node = (props) => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -38,6 +31,9 @@ const App: () => React$Node = () => {
               <Text style={styles.footer}>Engine: Hermes</Text>
             </View>
           )}
+          <Button onPress={() => {
+            props.navigation.navigate('About')
+          }} title='about page'></Button>
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
